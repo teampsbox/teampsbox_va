@@ -23,5 +23,5 @@ class Wealthy(models.Model):
 		verbose_name_plural = 'Wealthy'
 
 
-	def __str__(self):
-		return f'{self.wealthy_client.first_name} {self.wealthy_client.last_name}'
+	# def __str__(self):
+	# 	return f'{self.wealthy_client.first_name} {self.wealthy_client.last_name}'
