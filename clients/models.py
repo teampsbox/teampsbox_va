@@ -4,8 +4,8 @@ from datetime import datetime
 
 class Client(models.Model):
 	yfp_id = models.PositiveIntegerField(primary_key=True)
-	mango_id = models.PositiveIntegerField(blank=True)
-	hub_url = models.CharField(max_length=125, blank=True)
+	mango_id = models.PositiveIntegerField(blank=True, null=True)
+	hub_url = models.CharField(max_length=125, blank=True, null=True)
 	first_name = models.CharField(max_length=125)
 	last_name = models.CharField(max_length=125)
 	fb_page = models.CharField(max_length=125, blank=True)
