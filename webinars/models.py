@@ -1,8 +1,10 @@
+from django.conf import settings
 from django.db import models
 
 from clients.models import Client
 
 class Wealthy(models.Model):
+	assigned_va = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.DO_NOTHING, null=True)
 	wealthy_client = models.OneToOneField(
 		Client,
 		on_delete=models.CASCADE,

@@ -1,10 +1,8 @@
-from django.conf import settings
 from django.db import models
 from datetime import datetime
 
 
 class Client(models.Model):
-	assigned_va = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.DO_NOTHING)
 	yfp_id = models.PositiveIntegerField(primary_key=True)
 	mango_id = models.PositiveIntegerField()
 	hub_url = models.CharField(max_length=125)
